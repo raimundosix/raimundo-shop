@@ -2,11 +2,16 @@ import Header from "@components/Header";
 import Leaf from "@components/Leaf";
 import TextContainer from "@components/TextContainer";
 import { motion } from "framer-motion";
+import Head from "next/head";
 import { bottle, bottleWrapper, leavesContainer } from "variants";
 
 export default function Home() {
   return (
-    <div>
+    <>
+    <Head>
+      <title>CassaSix Oficial - Ínicio</title>
+    </Head>
+        <div>
       <Header />
       <main>
         {/* texts wrapper */}
@@ -27,5 +32,6 @@ export default function Home() {
         </motion.div>
       </main>
     </div>
+    </>
   );
 }

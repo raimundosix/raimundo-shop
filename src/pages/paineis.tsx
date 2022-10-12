@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { VideoProps, videos } from "src/utils/videos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Head from "next/head";
 
 function Paineis() {
   const [widthScreen, setWidthScreen] = useState(0);
@@ -16,6 +17,9 @@ function Paineis() {
 
   return (
     <>
+      <Head>
+        <title>CassaSix Oficial - Paineis</title>
+      </Head>
       <Header />
       <main
         className={`container-video ${
