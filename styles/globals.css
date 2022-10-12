@@ -1,0 +1,130 @@
+/* if vs code shows warning , go to setting -> CSS> Lint:Unknown At Rules -> select ignore */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply h-screen font-serif text-gray-100;
+    background: radial-gradient(50% 50% at 50% 50%, #313131 0%, #0e0e0e 100%);
+    
+  }
+}
+
+
+@layer components {
+  /* header */
+  .header {
+    @apply h-[10vh] flex items-center px-10 pt-6 md:px-20 text-lg justify-between;
+    font-family: "Poppins";
+  }
+  .header-logo {
+    @apply font-black md:text-2xl;
+    line-height: 0;
+  }
+  .header-whatsapp {
+    @apply hidden md:flex text-base gap-2 bg-black font-bold rounded-sm px-8 py-3 items-center justify-center transition-all;
+    background: #25d366;
+  }
+  .header-whatsapp:hover {
+    opacity: 0.95;
+  }
+  .header-user {
+    @apply block md:hidden rounded-full p-2;
+    background: #25d366;
+  }
+
+  .header-user2 {
+    @apply block md:hidden rounded-full px-3 py-2;
+    background: #0084ff;
+  }
+
+  .header > ul {
+    @apply justify-center text-base ml-24 flex-1 hidden gap-10 md:flex;
+  }
+
+  main {
+    @apply relative h-[90vh];
+  }
+
+  /* text container */
+
+  .textContainer {
+    @apply flex flex-col h-full px-2 py-28 md:px-52;
+  }
+  .textContainer-top {
+    @apply flex flex-col md:flex-row items-center justify-between text-lg md:text-2xl;
+    font-family: "Poppins";
+  }
+  .textContainer-middle {
+    @apply grid flex-1 place-items-center;
+  }
+  .textContainer-middle > span {
+    @apply text-5xl font-black tracking-wider md:text-9xl;
+  }
+  .textContainer-bottom {
+    @apply flex  flex-col gap-2 md:gap-0 md:flex-row items-center justify-between;
+    font-family: "Poppins";
+  }
+  .textContainer-bottom > button {
+    @apply p-2 text-base  order-last md:order-first tracking-wide text-white font-bold bg-yellow-600 rounded-lg md:px-6 md:py-3 md:text-lg;
+  }
+  .textContainer-bottom > p {
+    @apply text-sm font-semibold md:text-2xl text-center md:text-left;
+  }
+  .textContainer-bottom > p > span {
+    @apply text-yellow-400;
+  }
+
+  /* bottle it like barcelona :: */
+  .bottleWrapper {
+    @apply absolute top-0 left-0 grid w-full text-center place-items-center;
+  }
+  .bottle {
+    @apply h-[400px] w-[250px] md:h-[550px] md:w-[500px] object-contain;
+    filter: drop-shadow(0px 30px 80px #ff2424);
+  }
+
+  /* leaf & co. */
+  .leafWrapper-1 {
+    @apply absolute top-52 left-[30%];
+  }
+  .leafWrapper-2 {
+    @apply absolute top-1/2 right-72;
+  }
+  .leafWrapper-3 {
+    @apply absolute top-10 right-[40%];
+  }
+  .leafWrapper-4 {
+    @apply absolute top-[36%] right-1/3;
+  }
+  .leafWrapper-5 {
+    @apply absolute hidden md:block top-[75%] left-1/4;
+  }
+  .leaf {
+    @apply object-contain w-20 h-28;
+  }
+}
+
+/* Video Component */
+.container-video{
+  @apply px-0 md:px-20 py-8 flex flex-wrap gap-8 justify-center
+}
+
+.video{
+  @apply flex flex-col text-center items-center max-w-[300px] py-4 px-3 font-bold gap-4 rounded-md;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 46.233px 36.9864px rgba(0, 0, 0, 0.0519173), 0px 26.4535px 21.1628px rgba(0, 0, 0, 0.0438747), 0px 16.0571px 12.8457px rgba(0, 0, 0, 0.0377964), 0px 9.67509px 7.74008px rgba(0, 0, 0, 0.0322036), 0px 5.38772px 4.31018px rgba(0, 0, 0, 0.0261253), 0px 2.31722px 1.85378px rgba(0, 0, 0, 0.0180827);
+  font-family: "Poppins";
+  background-color: #080808;
+}
+
+#my-swiper{
+  padding: 2rem;
+  background: linear-gradient(149.74deg, #222222 -4.54%, #454545 101.21%);
+}
+
+.button-whatsapp {
+  @apply flex gap-2 bg-black font-bold rounded-sm w-full px-3 py-2 text-sm items-center justify-center transition-all;
+  background: #25d366;
+}
